@@ -29,6 +29,6 @@ export const en = {
   privacy: {
     title: "Privacy Policy",
     pending: "This privacy policy is currently being drafted. Please check back soon.",
-    backLabel: "Back to home",
+    backLabel: (name: string) => `back to ${name}`,
   },
 } as const;
