@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { projects } from "../../data/projects";
+import { en } from "../../i18n/en";
+---
+
+<BaseLayout title={`${en.projects.title} — ${en.site.title}`}>
+  <main
+    class="mx-auto flex min-h-dvh w-full max-w-5xl flex-col justify-center gap-8 px-[clamp(1.5rem,6vw,5rem)] py-32"
+  >
+    <h1 class="text-title font-extrabold uppercase">{en.projects.title}</h1>
+    <ul class="flex flex-col gap-4 sm:gap-6" aria-label={en.projects.ariaLabel}>
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </ul>
+  </main>
+</BaseLayout>

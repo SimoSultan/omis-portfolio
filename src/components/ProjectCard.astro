@@ -1,0 +1,30 @@
+---
+import type { Project } from "../data/projects";
+import { en } from "../i18n/en";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const href = `/projects/${project.slug}`;
+---
+
+<li>
+  <a
+    href={href}
+    aria-label={en.projects.cardAriaLabel(project.name)}
+    class="group flex items-center gap-5 rounded-3xl border border-line/40 p-5 transition-colors duration-200 hover:border-line focus-visible:border-line focus-visible:outline-none sm:gap-8 sm:p-7"
+  >
+    <span
+      aria-hidden="true"
+      class="flex aspect-square w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-muted/30 to-transparent text-title font-extrabold text-muted transition-colors duration-200 group-hover:text-ink sm:w-36"
+    >
+      {project.initial}
+    </span>
+    <span class="min-w-0">
+      <span class="block text-title font-extrabold">{project.name}</span>
+      <span class="mt-2 block text-body text-muted">{project.description}</span>
+    </span>
+  </a>
+</li>
