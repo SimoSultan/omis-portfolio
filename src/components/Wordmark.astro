@@ -1,0 +1,44 @@
+---
+import logo from "../../assets/white.png";
+
+interface Props {
+    label: string;
+}
+
+const { label } = Astro.props;
+
+const iIndex = label.toUpperCase().indexOf("I");
+const hasDot = iIndex !== -1;
+const before = hasDot ? label.slice(0, iIndex) : label;
+const letter = hasDot ? label.slice(iIndex, iIndex + 1) : "";
+const after = hasDot ? label.slice(iIndex + 1) : "";
+---
+
+<span class="relative inline-block" aria-label={label}>
+    <span aria-hidden="true">
+        {before}
+        <span class="relative">
+            {letter}
+            <span class="pointer-events-none absolute bottom-[75%] left-1/2 flex -translate-x-1/2 justify-center">
+                <span class="glow absolute left-1/2 top-1/2 aspect-square w-[80rem] -translate-x-1/2 -translate-y-1/2"></span>
+                <img
+                    src={logo.src}
+                    alt=""
+                    class="relative h-auto w-[75px] animate-rise"
+                />
+            </span>
+        </span>
+        {after}
+    </span>
+</span>
+
+<style>
+    .glow {
+        background: radial-gradient(
+            closest-side,
+            #f2f0eb73 -40%,
+            #f2f0eb1f 25%,
+            #f2f0eb00 110%
+        );
+    }
+</style>

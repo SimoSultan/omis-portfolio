@@ -1,12 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Wordmark from "../components/Wordmark.astro";
 import { en } from "../i18n/en";
 ---
 
 <BaseLayout>
-  <main class="vignette relative flex min-h-dvh flex-col justify-center px-[clamp(1.5rem,6vw,5rem)]">
+  <main
+    class="vignette relative flex min-h-dvh flex-col justify-center overflow-clip px-[clamp(1.5rem,6vw,5rem)]"
+  >
     <h1 class="relative animate-rise uppercase" aria-label={en.hero.ariaLabel}>
-      <span class="block text-hero font-extrabold">{en.hero.line1}</span>
+      <span class="block text-hero font-extrabold"><Wordmark label={en.hero.line1} /></span>
       <span class="block text-hero font-bold text-muted">{en.hero.line2}</span>
     </h1>
   </main>
@@ -18,10 +21,9 @@ import { en } from "../i18n/en";
     position: absolute;
     inset: 0;
     background: radial-gradient(
-      ellipse 65% 55% at 50% 42%,
-      rgba(242, 240, 235, 0.16) 0%,
-      rgba(242, 240, 235, 0.05) 35%,
-      rgba(0, 0, 0, 0) 55%,
+      ellipse 75% 65% at 50% 45%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 45%,
       rgba(0, 0, 0, 0.95) 100%
     );
     pointer-events: none;
