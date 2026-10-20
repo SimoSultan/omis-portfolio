@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMIS Studios</title>
+  <meta name="description" content="OMIS Studios — creative studio of Simon Curran, sole trader.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --ink: #f2f0eb;
+      --muted: #8a8780;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Syne", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: clamp(1.5rem, 6vw, 5rem);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+      pointer-events: none;
+    }
+
+    .wordmark {
+      position: relative;
+      font-size: clamp(4rem, 15vw, 11rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .wordmark .omis {
+      display: block;
+      font-weight: 800;
+    }
+
+    .wordmark .studios {
+      display: block;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(1.2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wordmark {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <h1 class="wordmark">
+      <span class="omis">OMIS</span>
+      <span class="studios">Studios</span>
+    </h1>
+  </main>
+</body>
+</html>
