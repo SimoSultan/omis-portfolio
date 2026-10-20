@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { projects, type Project } from "../../../data/projects";
+import { en } from "../../../i18n/en";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title={`${en.privacy.title} — ${project.name} — ${en.site.title}`}>
+  <main
+    class="mx-auto flex min-h-dvh w-full max-w-3xl flex-col justify-center gap-6 px-[clamp(1.5rem,6vw,5rem)] py-32"
+  >
+    <p class="text-body font-bold lowercase tracking-wide text-muted">{project.name}</p>
+    <h1 class="text-title font-extrabold uppercase">{en.privacy.title}</h1>
+    <p class="text-body text-muted">{en.privacy.pending}</p>
+    <a href={`/projects/${project.slug}`} class="pill w-fit">
+      {en.privacy.backLabel}
+    </a>
+  </main>
+</BaseLayout>

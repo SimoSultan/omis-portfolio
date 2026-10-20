@@ -7,8 +7,8 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "sixty6",
-    name: "Sixty6",
+    slug: "sixtysix",
+    name: "SixtySix",
     description: "An exercise habit tracker.",
     initial: "6",
   },
