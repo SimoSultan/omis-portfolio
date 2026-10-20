@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { en } from "../i18n/en";
+---
+
+<BaseLayout>
+  <main class="vignette relative flex min-h-dvh flex-col justify-center px-[clamp(1.5rem,6vw,5rem)]">
+    <h1 class="relative animate-rise uppercase" aria-label={en.hero.ariaLabel}>
+      <span class="block text-hero font-extrabold">{en.hero.line1}</span>
+      <span class="block text-hero font-bold text-muted">{en.hero.line2}</span>
+    </h1>
+  </main>
+</BaseLayout>
+
+<style>
+  .vignette::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 70% 55% at 50% 40%,
+      rgba(242, 240, 235, 0.08) 0%,
+      transparent 45%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    pointer-events: none;
+  }
+</style>

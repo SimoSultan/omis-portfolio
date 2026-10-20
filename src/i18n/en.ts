@@ -4,6 +4,7 @@ export const en = {
     description: "OMIS Studios — creative studio of Simon Curran, sole trader.",
   },
   nav: {
+    primaryAria: "Primary",
     contact: "contact",
     projects: "projects",
     contactAria: "Email OMIS Studios",
