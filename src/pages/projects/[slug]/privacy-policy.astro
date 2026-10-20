@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { projects, type Project } from "../../../data/projects";
 import { en } from "../../../i18n/en";
+import { getEntry, render } from "astro:content";
 
 export function getStaticPaths() {
   return projects.map((project) => ({
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const { project } = Astro.props;
+const policy = await getEntry("privacy", project.slug);
+const rendered = policy ? await render(policy) : null;
 ---
 
 <BaseLayout title={`${en.privacy.title} — ${project.name} — ${en.site.title}`}>
@@ -23,7 +26,15 @@ const { project } = Astro.props;
   >
     <p class="text-body font-bold lowercase tracking-wide text-muted">{project.name}</p>
     <h1 class="text-title font-extrabold uppercase">{en.privacy.title}</h1>
-    <p class="text-body text-muted">{en.privacy.pending}</p>
+    {
+      rendered ? (
+        <div class="policy-prose">
+          <rendered.Content />
+        </div>
+      ) : (
+        <p class="text-body text-muted">{en.privacy.pending}</p>
+      )
+    }
     <a href={`/projects/${project.slug}`} class="pill w-fit">
       {en.privacy.backLabel(project.name)}
     </a>
