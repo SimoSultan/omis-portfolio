@@ -5,8 +5,10 @@ export const en = {
   },
   nav: {
     primaryAria: "Primary",
+    home: "home",
     contact: "contact",
     projects: "projects",
+    homeAria: "Go to the home page",
     contactAria: "Email OMIS Studios",
     projectsAria: "View the projects list",
   },

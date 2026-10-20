@@ -7,19 +7,8 @@ import { en } from "../i18n/en";
     class="flex gap-2 p-[clamp(1.25rem,4vw,2.5rem)] sm:gap-3"
     aria-label={en.nav.primaryAria}
   >
-    <a
-      href="/projects"
-      class="rounded-full border border-line px-4 py-2 text-[clamp(0.85rem,2vw,1rem)] font-bold lowercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-bg focus-visible:bg-ink focus-visible:text-bg focus-visible:outline-none sm:px-5 sm:py-2.5"
-      aria-label={en.nav.projectsAria}
-    >
-      {en.nav.projects}
-    </a>
-    <a
-      href="mailto:simosultan2020@gmail.com"
-      class="rounded-full border border-line px-4 py-2 text-[clamp(0.85rem,2vw,1rem)] font-bold lowercase tracking-wide text-ink transition-colors duration-200 hover:bg-ink hover:text-bg focus-visible:bg-ink focus-visible:text-bg focus-visible:outline-none sm:px-5 sm:py-2.5"
-      aria-label={en.nav.contactAria}
-    >
-      {en.nav.contact}
-    </a>
+    <a href="/" class="pill" aria-label={en.nav.homeAria}>{en.nav.home}</a>
+    <a href="/projects" class="pill" aria-label={en.nav.projectsAria}>{en.nav.projects}</a>
+    <a href="mailto:simosultan2020@gmail.com" class="pill" aria-label={en.nav.contactAria}>{en.nav.contact}</a>
   </nav>
 </header>
