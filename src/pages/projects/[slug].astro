@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { projects, type Project } from "../../data/projects";
+import { en } from "../../i18n/en";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title={`${project.name} — ${en.site.title}`}>
+  <main
+    class="mx-auto flex min-h-dvh w-full max-w-4xl flex-col items-center justify-center gap-10 px-[clamp(1.5rem,6vw,5rem)] py-32 text-center"
+  >
+    <div
+      aria-hidden="true"
+      class="flex aspect-square w-40 items-center justify-center rounded-3xl bg-gradient-to-br from-muted/30 to-transparent text-8xl font-extrabold text-muted sm:w-56 sm:text-9xl"
+    >
+      {project.initial}
+    </div>
+    <div class="flex flex-col gap-4">
+      <h1 class="text-title font-extrabold">{project.name}</h1>
+      <p class="mx-auto max-w-xl text-body text-muted">{project.description}</p>
+    </div>
+    <a
+      href="/privacy-policy"
+      aria-label={en.project.privacyCriaLabel}
+      class="rounded-full bg-ink px-8 py-4 text-[clamp(1rem,2.5vw,1.3rem)] font-bold lowercase tracking-wide text-bg transition-transform duration-200 hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline-none sm:px-10 sm:py-5"
+    >
+      {en.project.privacyCta}
+    </a>
+  </main>
+</BaseLayout>
