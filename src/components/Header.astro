@@ -1,5 +1,7 @@
 ---
 import { en } from "../i18n/en";
+
+const isHome = Astro.url.pathname === "/";
 ---
 
 <header class="fixed top-0 right-0 z-10 animate-rise" style="animation-delay: 0.15s">
@@ -7,7 +9,7 @@ import { en } from "../i18n/en";
     class="flex gap-2 p-[clamp(1.25rem,4vw,2.5rem)] sm:gap-3"
     aria-label={en.nav.primaryAria}
   >
-    <a href="/" class="pill" aria-label={en.nav.homeAria}>{en.nav.home}</a>
+    {!isHome && <a href="/" class="pill" aria-label={en.nav.homeAria}>{en.nav.home}</a>}
     <a href="/projects" class="pill" aria-label={en.nav.projectsAria}>{en.nav.projects}</a>
     <a href="mailto:simosultan2020@gmail.com" class="pill" aria-label={en.nav.contactAria}>{en.nav.contact}</a>
   </nav>

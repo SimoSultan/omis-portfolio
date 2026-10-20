@@ -19,12 +19,12 @@ const after = hasDot ? label.slice(iIndex + 1) : "";
         {before}
         <span class="relative">
             {letter}
-            <span class="pointer-events-none absolute bottom-[75%] left-1/2 flex -translate-x-1/2 justify-center">
-                <span class="glow absolute left-1/2 top-1/2 aspect-square w-[80rem] -translate-x-1/2 -translate-y-1/2"></span>
+            <span class="pointer-events-none absolute bottom-[75%] left-[53%] w-full flex -translate-x-1/2 justify-center">
+                <span class="glow absolute left-1/2 top-1/2 aspect-square w-7xl -translate-x-1/2 -translate-y-1/2"></span>
                 <img
                     src={logo.src}
                     alt=""
-                    class="relative h-auto w-[75px] animate-rise"
+                    class="relative h-auto min-w-0 w-[clamp(4rem,10vw,80px)] animate-rise"
                 />
             </span>
         </span>
