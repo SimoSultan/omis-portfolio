@@ -1,7 +1,7 @@
 export const en = {
   site: {
-    title: "OMIS Studios",
-    description: "OMIS Studios — creative studio of Simon Curran, sole trader.",
+    title: "Omis Atelier",
+    description: "Omis Atelier — crafting your ideas to reality since 2026",
   },
   nav: {
     primaryAria: "Primary",
@@ -9,13 +9,13 @@ export const en = {
     contact: "contact",
     projects: "projects",
     homeAria: "Go to the home page",
-    contactAria: "Email OMIS Studios",
+    contactAria: "Email Omis Atelier",
     projectsAria: "View the projects list",
   },
   hero: {
-    line1: "OMIS",
-    line2: "Studios",
-    ariaLabel: "OMIS Studios",
+    line1: "Omis",
+    line2: "Atelier",
+    ariaLabel: "Omis Atelier",
   },
   projects: {
     title: "Projects",
