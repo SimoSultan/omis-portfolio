@@ -1,10 +1,10 @@
 **Effective date:** 20 October 2026
 
-Sixty6 ("the App", "we", "us") is a habit and exercise-consistency tracker operated by **{{legalName}}**, an Australian sole trader, ABN **{{abn}}**, based in **{{state}}, Australia**. Sixty6 turns daily exercise into friendly competition: users keep a personal bank of daily goals (e.g. push-up targets), log workout entries, and rank on leaderboards by completion rate and consistency.
+Sixty6 ("the App", "we", "us") is a habit and exercise-consistency tracker operated by **{{legalName}}**, an Australian sole trader, ABN **95181898959** based in **Queensland, Australia**. Sixty6 turns daily exercise into friendly competition: users keep a personal bank of daily goals (e.g. push-up targets), log workout entries, and rank on leaderboards by completion rate and consistency.
 
 The App is a direct-to-consumer (B2C) mobile application distributed through the Apple App Store and Google Play Store (bundle/package `com.simosultan.sixty6`).
 
-**Privacy contact:** [{{email}}](mailto:{{email}})
+**Privacy contact:** [simosultan2020@gmail.com](mailto:simosultan2020@gmail.com)
 
 This policy explains what personal information we collect, why we collect it, where we store it (including on your device and on overseas services), and the rights you have under the *Privacy Act 1988* (Cth) and the 13 Australian Privacy Principles (APPs).
 
@@ -19,7 +19,7 @@ This policy explains what personal information we collect, why we collect it, wh
 - We use **Amplitude** (product analytics), **PostHog** (error/crash reporting), **Google** and **Apple** (sign-in), and **Expo's push notification service**. Some of these services are hosted overseas (primarily the United States).
 - On your device we store your **login session token** and UI preferences in unencrypted app storage (AsyncStorage); your push notification token is stored on our server.
 - We do not sell your personal information, and we do not run third-party advertising in the App.
-- You can access, correct, or request deletion of your data by emailing [{{email}}](mailto:{{email}}).
+- You can access, correct, or request deletion of your data by emailing [simosultan2020@gmail.com](mailto:simosultan2020@gmail.com).
 
 ## 2. What we collect
 
@@ -142,9 +142,9 @@ Workout entries themselves are not exposed individually to other users; others s
 
 You have the right to:
 
-- **Access** the personal information we hold about you. Request an export at [{{email}}](mailto:{{email}}) and we will provide a machine-readable copy of your account, goals, entries, packs and related records.
+- **Access** the personal information we hold about you. Request an export at [simosultan2020@gmail.com](mailto:simosultan2020@gmail.com) and we will provide a machine-readable copy of your account, goals, entries, packs and related records.
 - **Correct** your name, username, avatar, and goal data any time in the App. For anything we cannot correct in-App, email us.
-- **Delete your account and data.** Email [{{email}}](mailto:{{email}}) with the subject "Delete my Sixty6 account" from the address associated with your account (or state your username). We will delete your user record, goals, entries, packs membership history, device tokens and notification events, subject only to limited retention required for legal disputes, security logs (rotated on a short cycle), and financial records if you ever held a paid subscription (kept as required by tax/consumer law).
+- **Delete your account and data.** Email [simosultan2020@gmail.com](mailto:simosultan2020@gmail.com) with the subject "Delete my Sixty6 account" from the address associated with your account (or state your username). We will delete your user record, goals, entries, packs membership history, device tokens and notification events, subject only to limited retention required for legal disputes, security logs (rotated on a short cycle), and financial records if you ever held a paid subscription (kept as required by tax/consumer law).
 - **Withdraw consent** for notifications (via OS settings) or for public leaderboard visibility (in-App setting), without losing access to core features.
 
 We will acknowledge requests within **30 days** and aim to complete them within that period.
@@ -170,7 +170,7 @@ You consent to the overseas disclosure of your personal information to the servi
 
 ## 12. Complaints
 
-If you believe we have breached the Australian Privacy Principles, contact us at **[{{email}}](mailto:{{email}})** with details. We will acknowledge within **7 days** and respond within **30 days**. If you are not satisfied, you may complain to the **Office of the Australian Information Commissioner (OAIC)**:
+If you believe we have breached the Australian Privacy Principles, contact us at **[simosultan2020@gmail.com](mailto:simosultan2020@gmail.com)** with details. We will acknowledge within **7 days** and respond within **30 days**. If you are not satisfied, you may complain to the **Office of the Australian Information Commissioner (OAIC)**:
 
 - Website: https://www.oaic.gov.au
 - Phone: 1300 363 992
