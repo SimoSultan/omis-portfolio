@@ -8,6 +8,9 @@ const tokens: Record<string, string> = {
   "{{abn}}": privacyDetails.abn,
   "{{state}}": privacyDetails.state,
   "{{email}}": privacyDetails.email,
+  "{{cloudRunRegion}}": privacyDetails.cloudRunRegion,
+  "{{neonRegion}}": privacyDetails.neonRegion,
+  "{{apiUrl}}": privacyDetails.apiUrl,
 };
 
 function applyTokens(value: string): string {
