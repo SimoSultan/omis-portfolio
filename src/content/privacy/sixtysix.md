@@ -90,8 +90,8 @@ We share limited data with the following service providers. Some process data **
 |---|---|---|---|
 | **Google LLC** (Google Sign-In) | Authentication | OAuth authorization code; we receive your Google subject ID, name, email (used transiently) | International (US) |
 | **Apple Inc.** (Sign in with Apple) | Authentication | Same as above via Apple OAuth | International (US) |
-| **Google Cloud Platform** (Cloud Run) — API hosting | Backend hosting | All application data (users, goals, entries, packs, device tokens) | Region configured at deployment; Google Cloud regions. Database is Neon-managed Postgres (see below) |
-| **Neon Inc.** (Postgres) | Primary database | All application data | International (managed cloud; offshore) |
+| **Google Cloud Platform** (Cloud Run) — API hosting | Backend hosting | All application data (users, goals, entries, packs, device tokens) | {{cloudRunRegion}} (Australia). Database is Neon-managed Postgres (see below) |
+| **Neon Inc.** (Postgres) | Primary database | All application data | {{neonRegion}} (Sydney, Australia) |
 | **Amplitude Inc.** | Product analytics | Device ID, user ID, product events, user properties (e.g. pack count) | United States |
 | **PostHog Inc.** | Crash / error tracking | Crash reports, stack traces, session context; server-side errors | United States (`us.i.posthog.com`) |
 | **Expo / expo.io push service** (`exp.host`) | Push notification delivery | Push token, notification title/body, your user ID | United States |
@@ -105,8 +105,8 @@ We share limited data with the following service providers. Some process data **
 
 ## 5. Where your data lives (infrastructure summary)
 
-- **API:** Go service deployed on **Google Cloud Run** (HTTPS; production URL `sixty6-api-…a.run.app`). Deployment region is chosen at deploy time (deploy tooling is configured for `australia-southeast1`-style regions; confirm the live region before publication and update this section if needed).
-- **Database:** **Neon** managed PostgreSQL. Neon regions are offshore (not Australia). All user records (accounts without email, goals, entries, packs, invites, device tokens, notification events) live here.
+- **API:** Go service deployed on **Google Cloud Run**, served over HTTPS from [{{apiUrl}}]({{apiUrl}}), in the {{cloudRunRegion}} region (Australia).
+- **Database:** **Neon** managed PostgreSQL in the {{neonRegion}} region (Sydney, Australia). All user records (accounts without email, goals, entries, packs, invites, device tokens, notification events) live here.
 - **Backups:** Neon-managed backups; occasional manual exports.
 - **Logs:** Cloud Run structured JSON logs; error snapshots forwarded to PostHog.
 
